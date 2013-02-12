@@ -1,0 +1,20 @@
+====================================
+SaltStack States and Pillar Examples
+====================================
+
+Purpose:
+--------
+
+This repository is a proof-of-concept created in a test-environment with a simple master+minion SaltStack setup.
+
+Notes:
+------
+
+I came from working with Puppet, so a lot of the bad Puppet habits learned using Puppet probably carry over into this repository. This is a work in progress, so hopefully I can salt-ify my mindset enough to fix any glaring issues between what "is" and what "should be".
+
+Documentation on SaltStack
+--------------------------
+
+You can find all the documentation for SaltStack at:
+
+http://salt.readthedocs.org
