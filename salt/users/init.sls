@@ -3,16 +3,16 @@ required_groups:
     - names:
       - admin
 
-{% if 'admin_users' in pillar or 'users' in pillar %}
+{% if 'template_users' in pillar %}
 include:
-  {% if 'admin_users' in pillar %}
-  {% for user in pillar['admin_users'] -%}
+  {% for user in pillar['template_users'] -%}
   - users.{{ user }}
   {% endfor %}
-  {% endif %}
-  {% if 'users' in pillar %}
+{% endif %}
+
+{% if 'users' in pillar %}
+include:
   {% for user in pillar['users'] -%}
   - users.{{ user }}
-  {% endfor -%}
-  {% endif %}
+  {% endfor %}
 {% endif %}

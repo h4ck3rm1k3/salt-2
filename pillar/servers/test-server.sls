@@ -1,5 +1,5 @@
 include:
-  - base
+  - templates.base
 
 users:
   - user1

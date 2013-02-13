@@ -1,15 +1,17 @@
-{% if 'packages' in pillar or 'base_packages' in pillar %}
+{% if 'template_packages' in pillar %}
+template_packages:
+  pkg.installed:
+    - pkgs:
+        {% for package in pillar['template_packages'] %}
+        -
+        {% endfor %}
+{% endif %}
+
+{% if 'packages' in pillar %}
 packages:
   pkg.installed:
-    - names:
-      {% if 'packages' in pillar %}
-      {% for pkg in pillar['packages'] %}
-      - {{ pkg }}
+    - pkgs:
+      {% for package in pillar['packages'] %}
+      - {{ package }}
       {% endfor %}
-      {% endif %}
-      {% if 'base_packages' in pillar %}
-      {% for pkg in pillar['base_packages'] %}
-      - {{ pkg }}
-      {% endfor %}
-      {% endif %}
 {% endif %}
