@@ -3,7 +3,7 @@ template_packages:
   pkg.installed:
     - pkgs:
         {% for package in pillar['template_packages'] %}
-        -
+        - {{ package }}
         {% endfor %}
 {% endif %}
 
@@ -11,7 +11,7 @@ template_packages:
 packages:
   pkg.installed:
     - pkgs:
-      {% for package in pillar['packages'] %}
-      - {{ package }}
-      {% endfor %}
+        {% for package in pillar['packages'] %}
+        - {{ package }}
+        {% endfor %}
 {% endif %}
