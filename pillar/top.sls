@@ -1,3 +1,5 @@
 base:
-  'puppet-test.tangentlabs.co.uk':
-    - servers.puppet-test
+  '*':
+    - logging
+  'test-server':
+    - servers.test-server
