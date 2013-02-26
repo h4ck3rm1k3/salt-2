@@ -1,6 +1,7 @@
-denyhosts-package:
+denyhosts:
   pkg.installed:
-    - name: denyhosts
+    - pkgs:
+      - denyhosts
 
 /etc/denyhosts.conf:
   file.managed:

@@ -1,6 +1,6 @@
 munin-packages:
   pkg.installed:
-    - names:
+    - pkgs:
       - munin-common
       - munin-node
 
@@ -11,7 +11,7 @@ munin-packages:
     - group: root
     - source: salt://munin/plugins/multimemory
     - require:
-      - pkg: munin-node
+      - pkg: munin-packages
 
 /etc/munin/plugin-conf.d/multimemory:
   file.managed:
@@ -20,10 +20,10 @@ munin-packages:
     - group: root
     - source: salt://munin/plugins/multimemory.conf
     - require:
-      - pkg: munin-node
+      - pkg: munin-packages
 
 munin-node-service:
   service.running:
     - name: munin-node
     - require:
-      - pkg: munin-node
+      - pkg: munin-packages

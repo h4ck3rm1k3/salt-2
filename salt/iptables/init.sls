@@ -1,6 +1,5 @@
-iptables-pkg:
-  pkg.installed:
-    - name: iptables
+iptables:
+  pkg.installed
 
 /etc/iptables.rules:
   file.managed:

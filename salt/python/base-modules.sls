@@ -1,4 +1,4 @@
-base_pip_modules:
-  pip.installed:
-    - names:
-        - raven
+#base_pip_modules:
+#  pip.installed:
+#    - names:
+#        - raven

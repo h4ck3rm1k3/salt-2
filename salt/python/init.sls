@@ -4,3 +4,4 @@ python-base:
       - python-dev
       - python-pip
       - python-setuptools
+      - python-virtualenv

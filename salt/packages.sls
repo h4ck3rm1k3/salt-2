@@ -10,6 +10,7 @@ template_packages:
 {% if 'packages' in pillar %}
 packages:
   pkg.installed:
+    - refresh: False
     - pkgs:
         {% for package in pillar['packages'] %}
         - {{ package }}
