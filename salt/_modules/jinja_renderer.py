@@ -3,7 +3,7 @@ import jinja2
 import logging
 import os
 
-from salt.exceptions import CommandExecutionError
+from salt.exceptions import CommandExecutionError, TemplateSyntaxError
 
 log = logging.getLogger(__name__)
 
