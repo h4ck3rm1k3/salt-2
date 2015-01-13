@@ -39,7 +39,7 @@ logger = logging.getLogger(__name__)
 def __virtual__():
     if not has_imports:
         logger.error("Missing a required import 'urllib', 'urllib2' or 'datetime'")
-        return false
+        return False
     pillar_data = __salt__['pillar.data']()
     if 'salt-logger' not in pillar_data:
         logger.error("Missing pillar data 'salt-logger'")

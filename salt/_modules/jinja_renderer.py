@@ -4,6 +4,7 @@ import logging
 import os
 
 from salt.exceptions import CommandExecutionError
+from jinja2.exceptions import TemplateSyntaxError
 
 log = logging.getLogger(__name__)
 
